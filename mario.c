@@ -13,14 +13,14 @@ int main(void)
     
     for (int i = 0; i < n; i++)
     {
-        for (int j = n-i; j > 1; j--)
+        for (int j = n - i; j > 1; j--)
         {
-           printf(" "); //prints spaces until the condition is met   
+            printf(" "); //prints spaces until the condition is met   
         }
        
-        for (int j = 0; j < i+1; j++)
+        for (int j = 0; j < i + 1; j++)
         {
-           printf("#"); //prints hashes until the condition is met   
+            printf("#"); //prints hashes until the condition is met   
         }
         printf("\n");
     }
