@@ -11,7 +11,7 @@ int main(void)
     }
     while (n < 1 || n > 8); //check if the input is valid
     
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         for (int j = n - i; j > 1; j--)
         {
