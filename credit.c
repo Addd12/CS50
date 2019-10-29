@@ -30,7 +30,7 @@ int main(void)
     for (int i = 0; i < numberOfDigits; i++)
     {
         digit = 0;
-        digit = ((n % a) / b) * 2;
+        digit = ((n % a) / b) * 2; //makes the calculation starting from second to last
 
         if (digit > 9)
         {
@@ -79,15 +79,19 @@ int main(void)
             printf("AMEX\n"); //if the condition is met, this line is printed
         }
 
-        else if (((n / 100000000000000 == 51) || (n / 100000000000000 == 52) || (n / 100000000000000 == 53)
-                  || (n / 100000000000000 == 54) || (n / 100000000000000 == 55)) && (numberOfDigits == 16))
+        else if (((n / 100000000000000 >= 51) && (n / 100000000000000 <= 55)) && (numberOfDigits == 16))
         {
             printf("MASTERCARD\n"); //if the condition is met, this line is printed
         }
 
-        else if (((n / 1000000000000 == 4) && (numberOfDigits == 13)) || ((n / 1000000000000000 == 4) && (numberOfDigits == 16)))
+        else if (((n / 1000000000000 == 4) && (numberOfDigits == 13)) || ((n / 1000000000000000 == 4) 
+                 && (numberOfDigits == 16)))
         {
             printf("VISA\n"); //if the condition is met, this line is printed
+        }
+        else
+        {
+            printf("INVALID\n");
         }
     }
 }
